@@ -1,0 +1,8 @@
+E:\Users\zxc\source\repos\strategy\strategy\bin\Debug\strategy.exe.config
+E:\Users\zxc\source\repos\strategy\strategy\bin\Debug\strategy.exe
+E:\Users\zxc\source\repos\strategy\strategy\bin\Debug\strategy.pdb
+E:\Users\zxc\source\repos\strategy\strategy\obj\Debug\strategy.csproj.AssemblyReference.cache
+E:\Users\zxc\source\repos\strategy\strategy\obj\Debug\strategy.csproj.SuggestedBindingRedirects.cache
+E:\Users\zxc\source\repos\strategy\strategy\obj\Debug\strategy.csproj.CoreCompileInputs.cache
+E:\Users\zxc\source\repos\strategy\strategy\obj\Debug\strategy.exe
+E:\Users\zxc\source\repos\strategy\strategy\obj\Debug\strategy.pdb
