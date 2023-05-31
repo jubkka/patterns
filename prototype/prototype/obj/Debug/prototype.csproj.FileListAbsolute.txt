@@ -1,0 +1,8 @@
+E:\Users\zxc\source\repos\prototype\prototype\bin\Debug\prototype.exe.config
+E:\Users\zxc\source\repos\prototype\prototype\bin\Debug\prototype.exe
+E:\Users\zxc\source\repos\prototype\prototype\bin\Debug\prototype.pdb
+E:\Users\zxc\source\repos\prototype\prototype\obj\Debug\prototype.csproj.AssemblyReference.cache
+E:\Users\zxc\source\repos\prototype\prototype\obj\Debug\prototype.csproj.SuggestedBindingRedirects.cache
+E:\Users\zxc\source\repos\prototype\prototype\obj\Debug\prototype.csproj.CoreCompileInputs.cache
+E:\Users\zxc\source\repos\prototype\prototype\obj\Debug\prototype.exe
+E:\Users\zxc\source\repos\prototype\prototype\obj\Debug\prototype.pdb
