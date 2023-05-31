@@ -1,0 +1,8 @@
+E:\Users\zxc\source\repos\memento\memento\bin\Debug\memento.exe.config
+E:\Users\zxc\source\repos\memento\memento\bin\Debug\memento.exe
+E:\Users\zxc\source\repos\memento\memento\bin\Debug\memento.pdb
+E:\Users\zxc\source\repos\memento\memento\obj\Debug\memento.csproj.AssemblyReference.cache
+E:\Users\zxc\source\repos\memento\memento\obj\Debug\memento.csproj.SuggestedBindingRedirects.cache
+E:\Users\zxc\source\repos\memento\memento\obj\Debug\memento.csproj.CoreCompileInputs.cache
+E:\Users\zxc\source\repos\memento\memento\obj\Debug\memento.exe
+E:\Users\zxc\source\repos\memento\memento\obj\Debug\memento.pdb
