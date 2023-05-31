@@ -1,0 +1,8 @@
+E:\Users\zxc\source\repos\builder\builder\bin\Debug\builder.exe.config
+E:\Users\zxc\source\repos\builder\builder\bin\Debug\builder.exe
+E:\Users\zxc\source\repos\builder\builder\bin\Debug\builder.pdb
+E:\Users\zxc\source\repos\builder\builder\obj\Debug\builder.csproj.AssemblyReference.cache
+E:\Users\zxc\source\repos\builder\builder\obj\Debug\builder.csproj.SuggestedBindingRedirects.cache
+E:\Users\zxc\source\repos\builder\builder\obj\Debug\builder.csproj.CoreCompileInputs.cache
+E:\Users\zxc\source\repos\builder\builder\obj\Debug\builder.exe
+E:\Users\zxc\source\repos\builder\builder\obj\Debug\builder.pdb
