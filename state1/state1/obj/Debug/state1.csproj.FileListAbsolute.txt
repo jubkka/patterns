@@ -1,0 +1,8 @@
+E:\Users\zxc\source\repos\state1\state1\bin\Debug\state1.exe.config
+E:\Users\zxc\source\repos\state1\state1\bin\Debug\state1.exe
+E:\Users\zxc\source\repos\state1\state1\bin\Debug\state1.pdb
+E:\Users\zxc\source\repos\state1\state1\obj\Debug\state1.csproj.AssemblyReference.cache
+E:\Users\zxc\source\repos\state1\state1\obj\Debug\state1.csproj.SuggestedBindingRedirects.cache
+E:\Users\zxc\source\repos\state1\state1\obj\Debug\state1.csproj.CoreCompileInputs.cache
+E:\Users\zxc\source\repos\state1\state1\obj\Debug\state1.exe
+E:\Users\zxc\source\repos\state1\state1\obj\Debug\state1.pdb
