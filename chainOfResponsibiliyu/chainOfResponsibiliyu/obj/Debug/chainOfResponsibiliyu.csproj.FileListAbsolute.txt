@@ -1,0 +1,8 @@
+E:\Users\zxc\source\repos\chainOfResponsibiliyu\chainOfResponsibiliyu\obj\Debug\chainOfResponsibiliyu.csproj.AssemblyReference.cache
+E:\Users\zxc\source\repos\chainOfResponsibiliyu\chainOfResponsibiliyu\obj\Debug\chainOfResponsibiliyu.csproj.SuggestedBindingRedirects.cache
+E:\Users\zxc\source\repos\chainOfResponsibiliyu\chainOfResponsibiliyu\obj\Debug\chainOfResponsibiliyu.csproj.CoreCompileInputs.cache
+E:\Users\zxc\source\repos\chainOfResponsibiliyu\chainOfResponsibiliyu\bin\Debug\chainOfResponsibiliyu.exe.config
+E:\Users\zxc\source\repos\chainOfResponsibiliyu\chainOfResponsibiliyu\bin\Debug\chainOfResponsibiliyu.exe
+E:\Users\zxc\source\repos\chainOfResponsibiliyu\chainOfResponsibiliyu\bin\Debug\chainOfResponsibiliyu.pdb
+E:\Users\zxc\source\repos\chainOfResponsibiliyu\chainOfResponsibiliyu\obj\Debug\chainOfResponsibiliyu.exe
+E:\Users\zxc\source\repos\chainOfResponsibiliyu\chainOfResponsibiliyu\obj\Debug\chainOfResponsibiliyu.pdb
