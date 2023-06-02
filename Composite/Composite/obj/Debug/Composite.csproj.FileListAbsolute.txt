@@ -1,0 +1,8 @@
+E:\Users\zxc\source\repos\Composite\Composite\bin\Debug\Composite.exe.config
+E:\Users\zxc\source\repos\Composite\Composite\bin\Debug\Composite.exe
+E:\Users\zxc\source\repos\Composite\Composite\bin\Debug\Composite.pdb
+E:\Users\zxc\source\repos\Composite\Composite\obj\Debug\Composite.csproj.AssemblyReference.cache
+E:\Users\zxc\source\repos\Composite\Composite\obj\Debug\Composite.csproj.SuggestedBindingRedirects.cache
+E:\Users\zxc\source\repos\Composite\Composite\obj\Debug\Composite.csproj.CoreCompileInputs.cache
+E:\Users\zxc\source\repos\Composite\Composite\obj\Debug\Composite.exe
+E:\Users\zxc\source\repos\Composite\Composite\obj\Debug\Composite.pdb

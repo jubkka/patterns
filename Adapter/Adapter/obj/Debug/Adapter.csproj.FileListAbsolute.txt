@@ -1,0 +1,8 @@
+E:\Users\zxc\source\repos\Adapter\Adapter\bin\Debug\Adapter.exe.config
+E:\Users\zxc\source\repos\Adapter\Adapter\bin\Debug\Adapter.exe
+E:\Users\zxc\source\repos\Adapter\Adapter\bin\Debug\Adapter.pdb
+E:\Users\zxc\source\repos\Adapter\Adapter\obj\Debug\Adapter.csproj.AssemblyReference.cache
+E:\Users\zxc\source\repos\Adapter\Adapter\obj\Debug\Adapter.csproj.SuggestedBindingRedirects.cache
+E:\Users\zxc\source\repos\Adapter\Adapter\obj\Debug\Adapter.csproj.CoreCompileInputs.cache
+E:\Users\zxc\source\repos\Adapter\Adapter\obj\Debug\Adapter.exe
+E:\Users\zxc\source\repos\Adapter\Adapter\obj\Debug\Adapter.pdb
