@@ -11,19 +11,38 @@ namespace Decorator
         abstract class Person
         {
             public string name;
-            public bool protectedCold; //защита от холода
-            public bool protectedRain; // защита от дождя
+            public bool protectedCold = false; //защита от холода
+            public bool protectedRain = false; // защита от дождя
+
+            public int speed = 100;
+            public int weight = 0; 
+            public int energy = 100;
 
             public Person(string name) => this.name = name;
+
+            public abstract string WalkInRainDay();
+            public abstract string WalkInColdDay();
+
+            public abstract string Run();
+
+            public abstract int Speed(int a);
         }
 
         class Human : Person
         {
-            public Human() : base("Павел")
+            public Human(string name) : base(name) { }
+
+            public override string WalkInRainDay() { return "Я не могу гулять под дождем, я промокну"; }
+            public override string WalkInColdDay() { return "Я не могу гулять, там холодно"; }
+
+            public override string Run() 
             {
-                protectedCold = false;
-                protectedRain = false;
+                return $"Бежим со скоростью {Speed()}";
             }
+            public override int Speed(int a = 1) 
+            {
+                return speed = (weight + a) * energy;
+            } 
         }
 
         abstract class HumanDecorator : Person
@@ -34,31 +53,45 @@ namespace Decorator
 
         class HumanWithSweater : HumanDecorator
         {
-            public HumanWithSweater(Person p)
-                : base(p.name + ", в свитаре", p)
-            {
-                protectedCold = true;
-            }
+            public HumanWithSweater(Person p) : base(p.name + ", в свитаре", p) { protectedCold = true;  weight -= 20; }
+
+            public override string WalkInColdDay() { return "Я могу гулять в холод"; }
+
+            public override string WalkInRainDay() { return person.WalkInRainDay(); }
+
+            public override string Run() { return $"Я могу бежать со скростью {speed}"; }
+
+            public override int Speed(int a) { return person.Speed(10); }
+
         }
 
         class HumanWithRaincoat : HumanDecorator
         {
-            public HumanWithRaincoat(Person p)
-                : base(p.name + ", и в дождивике", p)
-            {
-                protectedRain = true;
-            }
+            public HumanWithRaincoat(Person p) : base(p.name + ", и в дождивике", p) { protectedRain = true; weight -= 20; }
+
+            public override string WalkInRainDay() { return "Я могу гулять под дождем"; }
+            public override string WalkInColdDay() { return person.WalkInColdDay(); }
+
+            public override string Run() { return $"Я могу бежать со скростью {speed}"; }
+
+            public override int Speed(int a) { return person.Speed(20); }
         }
 
 
         static void Main()
         {
-            Person human = new Human();
-            human = new HumanWithSweater(human);
+            Person human = new Human("Алеша");
 
-            Console.WriteLine("Имя: {0}", human.name);
-            Console.WriteLine("Защита от холода: {0}", human.protectedCold);
-            Console.WriteLine("Защита от дождя: {0}", human.protectedRain);
+            Console.WriteLine(human.name);
+            Console.WriteLine(human.WalkInColdDay());
+            Console.WriteLine(human.WalkInColdDay());
+
+            human = new HumanWithSweater(human);
+            human = new HumanWithRaincoat(human);
+
+            Console.WriteLine(human.name);
+            Console.WriteLine(human.WalkInRainDay());
+            Console.WriteLine(human.WalkInColdDay());
 
             Console.Read();
         }
