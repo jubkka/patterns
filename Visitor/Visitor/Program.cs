@@ -8,30 +8,100 @@ namespace Visitor
 {
     internal class Program
     {
-        interface Person
+        abstract class Person
         {
-            void VisitClerking(Clearking clearking);
-            void VisitDevelopmentRoom(DevelopmentRoom developmentRoom);
-            void VisitRestroom(Restroom restroom);
+            public string name;
+            public int money = 0;
+            public int cash = 0; // деньги в бухгалтерии
+            public int salary;
+            public int energy = 100;
+
+            public abstract void Work();
+            public abstract void Chill();
+            public abstract void GetMoney();
+            public abstract void VisitClerking(Clearking clearking);
+            public abstract void VisitDevelopmentRoom(DevelopmentRoom developmentRoom);
+            public abstract void VisitRestroom(Restroom restroom);
         }
 
         class Programmer : Person
         {
-            public void VisitClerking(Clearking clearking) => Console.WriteLine("Почини компьютер, ты же программист");
-            public void VisitDevelopmentRoom(DevelopmentRoom developmentRoom) => Console.WriteLine("Сиди и пиши программу");
-            public void VisitRestroom(Restroom restroom) => Console.WriteLine("Программист отдыхает");
+            public Programmer(string name, int salary) { this.name = name; this.salary = salary; }
+            public override void VisitClerking(Clearking clearking) => GetMoney();
+            public override void VisitDevelopmentRoom(DevelopmentRoom developmentRoom) => Chill();
+            public override void VisitRestroom(Restroom restroom) => Chill();
+
+            public override void Chill() 
+            {
+                Console.WriteLine("Делаем деньги лежа на диване");
+                cash += salary;
+                energy++; //копим чакру
+            }
+
+            public override void GetMoney()
+            {
+                Console.WriteLine($"Ваша зарплата {name} в размере {cash}");
+                money = cash;
+                cash = 0;
+            }
+
+            public override void Work() => Chill();
         }
         class Electrician : Person
         {
-            public void VisitClerking(Clearking clearking) => Console.WriteLine("Почини компьютер, ты же электрик");
-            public void VisitDevelopmentRoom(DevelopmentRoom developmentRoom) => Console.WriteLine("Если лампа не горит, то чините, до тех пор пока не заработает");
-            public void VisitRestroom(Restroom restroom) => Console.WriteLine("Электрик отдыхает");
+            public Electrician(string name) { this.name = name; }
+            public override void VisitClerking(Clearking clearking) => GetMoney();
+            public override void VisitDevelopmentRoom(DevelopmentRoom developmentRoom) => Work();
+            public override void VisitRestroom(Restroom restroom) => Chill();
+
+            public override void Chill()
+            {
+                energy++;
+                Console.WriteLine($"{name} присел отдохнуть");
+            }
+
+            public override void GetMoney()
+            {
+                Console.WriteLine($"Ваша зарплата {name} в размере {cash}");
+                money = cash / 2;
+                cash = 0;
+            }
+
+            public override void Work()
+            {
+                energy--;
+                Console.WriteLine($"{name} чиним, чиним");
+            }
         }
         class Cleaner : Person
         {
-            public void VisitClerking(Clearking clearking) => Console.WriteLine($"Убирается в {clearking.name}");
-            public void VisitDevelopmentRoom(DevelopmentRoom developmentRoom) => Console.WriteLine($"Убирается в {developmentRoom.name}");
-            public void VisitRestroom(Restroom restroom) => Console.WriteLine($"Убирается в {restroom.name}");
+            public Cleaner(string name) { this.name = name; }
+            public override void VisitClerking(Clearking clearking) => Console.WriteLine($"Убирается в {clearking.name}");
+            public override void VisitDevelopmentRoom(DevelopmentRoom developmentRoom) => Console.WriteLine($"Убирается в {developmentRoom.name}");
+            public override void VisitRestroom(Restroom restroom) => Chill();
+
+            public override void Chill()
+            {
+                energy -= 5;
+                Console.WriteLine($"{name} убирает комнату отдыха, смотря как другие отдыхают");
+                Work();
+            }
+
+            public override void GetMoney()
+            {
+                Console.WriteLine($"Ваша зарплата {name} в размере {cash}");
+                money = cash / 10;
+                cash = -100;
+
+                Work();
+            }
+
+            public override void Work()
+            {
+                energy -= 3;
+                Console.WriteLine($"{name} моем, моем");
+            }
+
         }
 
 
@@ -61,11 +131,6 @@ namespace Visitor
             public Restroom(string name) => this.name = name;
 
             public void Accept(Person person) => person.VisitRestroom(this);
-        }
-
-
-        static void Main(string[] args)
-        {
         }
     }
 }
