@@ -1,0 +1,8 @@
+E:\Users\zxc\source\repos\Bridge\Bridge\bin\Debug\Bridge.exe.config
+E:\Users\zxc\source\repos\Bridge\Bridge\bin\Debug\Bridge.exe
+E:\Users\zxc\source\repos\Bridge\Bridge\bin\Debug\Bridge.pdb
+E:\Users\zxc\source\repos\Bridge\Bridge\obj\Debug\Bridge.csproj.AssemblyReference.cache
+E:\Users\zxc\source\repos\Bridge\Bridge\obj\Debug\Bridge.csproj.SuggestedBindingRedirects.cache
+E:\Users\zxc\source\repos\Bridge\Bridge\obj\Debug\Bridge.csproj.CoreCompileInputs.cache
+E:\Users\zxc\source\repos\Bridge\Bridge\obj\Debug\Bridge.exe
+E:\Users\zxc\source\repos\Bridge\Bridge\obj\Debug\Bridge.pdb

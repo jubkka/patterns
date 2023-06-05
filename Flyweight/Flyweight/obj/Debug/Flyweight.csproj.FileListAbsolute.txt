@@ -1,0 +1,8 @@
+E:\Users\zxc\source\repos\Flyweight\Flyweight\bin\Debug\Flyweight.exe.config
+E:\Users\zxc\source\repos\Flyweight\Flyweight\bin\Debug\Flyweight.exe
+E:\Users\zxc\source\repos\Flyweight\Flyweight\bin\Debug\Flyweight.pdb
+E:\Users\zxc\source\repos\Flyweight\Flyweight\obj\Debug\Flyweight.csproj.AssemblyReference.cache
+E:\Users\zxc\source\repos\Flyweight\Flyweight\obj\Debug\Flyweight.csproj.SuggestedBindingRedirects.cache
+E:\Users\zxc\source\repos\Flyweight\Flyweight\obj\Debug\Flyweight.csproj.CoreCompileInputs.cache
+E:\Users\zxc\source\repos\Flyweight\Flyweight\obj\Debug\Flyweight.exe
+E:\Users\zxc\source\repos\Flyweight\Flyweight\obj\Debug\Flyweight.pdb
