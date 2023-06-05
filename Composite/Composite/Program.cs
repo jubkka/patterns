@@ -41,20 +41,26 @@ namespace Composite
     abstract class Component
     {
         protected string name;
-
+        
         public string Name { get { return name; } }
 
-        public Component(string name) => this.name = name;
+        public Component(string name)
+        {
+            this.name = name;
+        }
 
         public virtual void Add(Component component) { }
 
         public virtual void Remove(Component component) { }
 
         public virtual void Print() { }
+
+        public virtual void Attack() { }
     }
     class Army : Component
     {
         private List<Component> components = new List<Component>();
+        internal int provision;
 
         public Army(string name) : base(name) { }
 
@@ -68,6 +74,14 @@ namespace Composite
             Console.Write("Взводы: ");
 
             for (int i = 0; i < components.Count; i++) components[i].Print();
+        }
+
+        public void HoldFront() => Console.WriteLine($"Армия {name} удерживает фронт");
+
+        public override void Attack()
+        {
+            for (int i = 0; i < components.Count; i++) components[i].Attack();
+            Console.WriteLine($"Атакуем всей армией {name}");
         }
     }
 
@@ -87,11 +101,42 @@ namespace Composite
             Console.Write("\nСолдаты:");
             for (int i = 0; i < components.Count; i++) Console.Write($"{components[i].Name} ");
         }
+
+        public void Escort() => Console.WriteLine("Сопровождение конвоя...");
+        public override void Attack()
+        {
+
+            Console.WriteLine($"Атакуем взводом {name}...");
+            for(int i = 0; i < components.Count; i++) components[i].Attack();
+        }
     }
 
     class Soldiers : Component
     {
-         public Soldiers(string name) : base(name) { }
+        protected int morale;
+
+        public Soldiers(string name) : base(name) { }
+
+        public void PaintTheGrass() 
+        { 
+            Console.WriteLine("Трава покрашена, комбат доволен, солдат устал");
+            morale -= 5;
+        }
+
+        public void March() 
+        {
+            Random random= new Random();
+
+            int result = random.Next(0, 1);
+
+            if (result == 1) Console.WriteLine($"Солдат {name} cпоткнулся и упал");
+            else Console.WriteLine($"Солдат {name} гордо марширует");
+        }
+
+        public override void Attack() 
+        {
+            Console.WriteLine($"Атакакует солдат {name}");
+        }
     }
 
 }

@@ -6,70 +6,94 @@ using System.Threading.Tasks;
 
 namespace Adapter
 {
-    internal class Program
+    class Program
     {
-
-        //аналогия со стандартами розеток. Европейские розетки не подходят в Америке, поэтому надо использовать адаптер
-        interface IСhargerEU
-        {
-            void ChargeEU(); // заряжаем по европейским стандартам
-        }
-
-        class ChargerEU : IСhargerEU
-        {
-            public void ChargeEU()
-            {
-                Console.WriteLine("Зарядка с европейской вилкой");
-            }
-        }
-        
-
-        interface IChargerUSA
-        {
-            void ChargeUSA(); // заряжаем по американским стандартам
-        }
-
-        class ChargerUSA : IChargerUSA
-        {
-            public void ChargeUSA()
-            {
-                Console.WriteLine("Зарядка с американской вилкой");
-            }
-        }
-
-        class EuToUsaAdapter : IСhargerEU
-        {
-            ChargerUSA chargerUSA;
-            public EuToUsaAdapter(ChargerUSA chargerUSA) => this.chargerUSA = chargerUSA;
-
-            public void ChargeEU()
-            {
-                chargerUSA.ChargeUSA();
-            }
-        }
-
-        class Driver
-        {
-            public void Charge(IСhargerEU charge)
-            {
-                charge.ChargeEU();
-            }
-        }
-
-
         static void Main(string[] args)
         {
-            Driver driver = new Driver();
-            ChargerEU chargerEU = new ChargerEU();
+            Traveler driver = new Traveler();
 
-            driver.Charge(chargerEU);
+            Auto auto = new Auto();
+            Boat boat = new Boat();
+            Plane plane = new Plane();
 
-            ChargerUSA chargerUSA = new ChargerUSA();
-            IСhargerEU charger = new EuToUsaAdapter(chargerUSA);
+            driver.Travel(auto);
 
-            driver.Charge(charger);
+            IAuto adapter = new PlaneAdapter(plane);
+
+            driver.Travel(adapter);
+
+            adapter = new BoatAdapter(boat);
+
+            driver.Travel(adapter);
 
             Console.Read();
         }
     }
+
+    class Traveler
+    {
+        public void Travel(IAuto transport)
+        {
+            transport.Drive();
+        }
+    }
+
+    interface IAuto
+    {
+        void Drive();
+    }
+
+    class Auto : IAuto
+    {
+        public void Drive() => Console.WriteLine("Путешествиник едет на машине");
+    }
+
+    interface IPlane
+    {
+        void Fly();
+    }
+
+    class Plane : IPlane
+    {
+        public void Fly() => Console.WriteLine("Путешествиник летит на самолете");
+    }
+
+    interface IBoat
+    {
+        void Trip();
+    }
+
+    class Boat : IBoat
+    {
+        public void Trip() => Console.WriteLine("Путешествиник плывет на лодке");
+    }
+
+    class PlaneAdapter : IAuto
+    {
+        Plane panel;
+        public PlaneAdapter(Plane panel)
+        {
+            this.panel = panel;
+        }
+
+        public void Drive()
+        {
+            panel.Fly();
+        }
+    }
+
+    class BoatAdapter : IAuto
+    {
+        Boat boat;
+        public BoatAdapter(Boat boat)
+        {
+            this.boat = boat;
+        }
+
+        public void Drive()
+        {
+            boat.Trip();
+        }
+    }
+
 }
