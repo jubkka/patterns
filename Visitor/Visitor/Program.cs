@@ -20,6 +20,7 @@ namespace Visitor
             public abstract void VisitRestroom(Restroom restroom);
 
             public void GetMoney() => Console.WriteLine($"{name} получает {salary}");
+            public abstract void Chill();
         }
 
         class Programmer : Person
@@ -30,7 +31,7 @@ namespace Visitor
             public override void VisitRestroom(Restroom restroom) => Chill();
 
             public void Coding() => Console.WriteLine($"{name} программирует...");
-            public void Chill()
+            public override void Chill()
             {
                 energy += 5;
                 Console.WriteLine($"{name} отдыхает...");
@@ -41,10 +42,10 @@ namespace Visitor
             public Electrician(string name) { this.name = name; }
             public override void VisitClerking(Clearking clearking) => GetMoney();
             public override void VisitDevelopmentRoom(DevelopmentRoom developmentRoom) => Repair();
-            public override void VisitRestroom(Restroom restroom) => Rest();
+            public override void VisitRestroom(Restroom restroom) => Chill();
 
             public void Repair() => Console.WriteLine($"{name} чинит...");
-            public void Rest()
+            public override void Chill()
             {
                 energy += 2;
                 Console.WriteLine($"{name} отдыхает...");
@@ -58,6 +59,7 @@ namespace Visitor
             public override void VisitRestroom(Restroom restroom) => Clean();
 
             public void Clean() => Console.WriteLine($"{name} убирается...");
+            public override void Chill() => Clean();
         }
 
 
